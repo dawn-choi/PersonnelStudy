@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>문서의 제목</title>
+</head>
+<body>
+    <h1>안녕하세요!</h1>
+    <p>이것은 HTML 문서의 기본 구조입니다.</p>
+	<a href="/hello">hello</a>
+	<script>
+	   // 페이지 로드 후 API 호출
+	   fetch("/api/test")
+	     .then(response => response.text())
+	     .then(data => {
+	       console.log("서버에서 받은 값:", data);
+	     })
+	     .catch(err => console.error("에러 발생:", err));
+	 </script>
+</body>
+</html>
