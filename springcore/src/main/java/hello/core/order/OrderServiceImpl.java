@@ -17,7 +17,8 @@ public class OrderServiceImpl implements OrderService{
 	public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy )
 	{
 		this.memberRepository = memberRepository;
-		this.discountPolicy = discountPolicy;		
+		this.discountPolicy = discountPolicy;
+		
 	}
 	@Override
 	public Order createOrder(Long memberId, String itemname, int itemPrice) {
@@ -26,6 +27,7 @@ public class OrderServiceImpl implements OrderService{
 		int discountPrice = discountPolicy.discount(member, itemPrice);
 		
 		return new Order(memberId ,itemname,itemPrice,discountPrice);
+		
 	}
 
 	

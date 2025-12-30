@@ -1,5 +1,9 @@
 package hello.core.member;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
+@Component
 public class MemberServiceImpl implements MemberService {
 
 	private final MemberRepository memberRepository;
@@ -9,6 +13,7 @@ public class MemberServiceImpl implements MemberService {
 	// 상속클래스 대신 인터페이스만 빈에 올라와있으니 인터페이스로 호출한다
 	//	private final MemoryMemberRepository memberRepository = new MemoryMemberRepository();
 	
+	@Autowired //ac.getbean(MemberRepositroy.class) 
 	public MemberServiceImpl(MemberRepository memberRepository ) {
 		this.memberRepository = memberRepository;
 	}

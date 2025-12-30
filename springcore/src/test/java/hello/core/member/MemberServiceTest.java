@@ -23,8 +23,8 @@ public class MemberServiceTest {
 		Member member = new Member(1L, "meberA" , Grade.VIP);
 		memberService.join(member);
 		Member findMember = memberService.findMember(1L);
-		Assertions.assertThat(member).isEqualTo(findMember);
 		
-		 
+		
+		Assertions.assertThat(member).isEqualTo(findMember);
 	}
 }

@@ -1,3 +1,4 @@
+
 package hello.core.discount;
 
 import hello.core.member.Grade;
