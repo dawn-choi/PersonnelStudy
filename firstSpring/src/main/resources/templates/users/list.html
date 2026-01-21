@@ -1,0 +1,14 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8"/>
+  <link rel="stylesheet" th:href="@{/css/app.css}">
+  <title>Users</title>
+</head>
+<body>
+<h1>Users</h1>
+<ul>
+  <li th:each="u : ${users}" th:text="${u.id} + ' - ' + ${u.name}"></li>
+</ul>
+</body>
+</html>
